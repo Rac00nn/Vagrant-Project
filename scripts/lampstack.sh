@@ -22,7 +22,7 @@ yum install -y git nano unzip screen net-tools elinks
 yum install -y setroubleshoot setroubleshoot-server policycoreutils-python policycoreutils-devel setools-console
 
 #Enable Apache Permisive Mode
-semanage permisive -a httpd_t
+semanage permissive -a httpd_t
 
 #Apache
 yum install -y httpd httpd-devel httpd-tools
