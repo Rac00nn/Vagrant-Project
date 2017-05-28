@@ -10,7 +10,7 @@ fi
 yum install epel-release -y
 
 #Installing necessary updates
-yum update -y --excluding kernel
+yum update -y --exclude=kernel
 
 #Install Group BASE
 yum groupinstall "base"
