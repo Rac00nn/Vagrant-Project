@@ -4,11 +4,11 @@
 Vagrant.configure("2") do |config|
   config.vm.box = "lampstack"
 
-  # Box Update
+  #Box Update
   config.vm.box_check_update = false
   config.vbguest.auto_update = false
 
-  # Port Forwarding
+  #Port Forwarding
   config.vm.network "forwarded_port", guest: 80, host: 8080
 
   #Provisioning
