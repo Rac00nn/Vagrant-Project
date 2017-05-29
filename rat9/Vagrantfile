@@ -1,0 +1,18 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+Vagrant.configure("2") do |config|
+  config.vm.box = "lampstack"
+
+  # Box Update
+  config.vm.box_check_update = false
+  config.vbguest.auto_update = false
+
+  # Port Forwarding
+  config.vm.network "forwarded_port", guest: 80, host: 8080
+
+  #Provisioning
+  config.vm.provision "file", source: "~/Projects/files/git-config", destination: "~/.gitconfig"
+  config.vm.provision "shell", path: "~/Projects/scripts/lampstack.sh"
+
+end
